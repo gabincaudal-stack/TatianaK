@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+<defs><radialGradient id="surface" cx="35%" cy="30%" r="75%"><stop stop-color="#f5f0dc"/><stop offset=".65" stop-color="#c3c1b5"/><stop offset="1" stop-color="#666e7a"/></radialGradient><clipPath id="disk"><circle cx="300" cy="300" r="265"/></clipPath></defs>
+<circle cx="300" cy="300" r="265" fill="url(#surface)"/>
+<g clip-path="url(#disk)" fill="#687281" opacity=".22"><ellipse cx="210" cy="190" rx="77" ry="65"/><ellipse cx="335" cy="170" rx="65" ry="82"/><ellipse cx="175" cy="300" rx="85" ry="59"/><ellipse cx="340" cy="300" rx="110" ry="60"/><ellipse cx="395" cy="380" rx="50" ry="82"/><circle cx="240" cy="423" r="38"/></g>
+<g fill="none" stroke="#f5f0dc" stroke-width="3" opacity=".28"><circle cx="195" cy="380" r="29"/><circle cx="422" cy="231" r="24"/><circle cx="319" cy="441" r="19"/><circle cx="289" cy="102" r="15"/><circle cx="120" cy="249" r="17"/></g>
+</svg>
