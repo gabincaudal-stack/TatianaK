@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- INFO : titre affiché dans l’onglet du navigateur. -->
+  <title>Une lettre sous la lune</title>
+
+  <!-- INFO : charge la présentation depuis le fichier style.css. -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- INFO : charge le fonctionnement depuis le fichier script.js. -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <!-- INFO : les particules seront ajoutées ici automatiquement. -->
+  <div class="particles" aria-hidden="true"></div>
+
+  <main>
+
+    <!-- INFO : début du premier écran avec le mot de passe. -->
+    <section
+      id="gate"
+      class="gate"
+      aria-labelledby="gate-title"
+    >
+
+      <span class="eyebrow">A MOMENT CLOSE TO YOUR HEART</span>
+
+      <h1 id="gate-title">Password required</h1>
+
+      <form id="password-form">
+
+        <label class="sr-only" for="password">
+          Mot de passe
+        </label>
+
+        <!--
+          INFO : ceci est le champ où le visiteur saisit le mot de passe.
+          Ne mets pas ton mot de passe dans cette ligne.
+          Tu le choisiras plus tard dans le fichier script.js.
+        -->
+        <input
+          id="password"
+          type="password"
+          placeholder="Mot de passe"
+          autocomplete="current-password"
+          aria-describedby="password-message"
+          required
+        >
+
+        <button type="submit">
+          Entrer <span aria-hidden="true">→</span>
+        </button>
+
+        <!-- INFO : un message apparaîtra ici si le mot de passe est incorrect. -->
+        <p
+          id="password-message"
+          class="message"
+          role="status"
+        ></p>
+
+      </form>
+
+    </section>
+    <!-- INFO : fin du premier écran. -->
+
+
+    <!--
+      INFO : début du deuxième écran.
+      Le mot "hidden" le masque au départ.
+      Le script l’affichera lorsque le bon mot de passe sera validé.
+    -->
+    <section
+      id="letter-page"
+      class="letter-page"
+      aria-labelledby="letter-title"
+      hidden
+    >
+
+      <!--
+        INFO : illustration de la lune en arrière-plan.
+        Le fichier moon.svg devra se trouver dans le dossier assets.
+        Une lune SVG est fournie dans l’archive précédente.
+      -->
+      <img
+        class="moon"
+        src="assets/moon.svg"
+        alt=""
+        aria-hidden="true"
+        width="600"
+        height="600"
+      >
+
+      <header class="letter-header">
+
+        <span class="eyebrow">UNDER THE SAME MOON</span>
+
+        <!-- INFO : ce bouton permettra de lancer ou de mettre en pause la musique. -->
+        <button
+          id="play-button"
+          type="button"
+          aria-pressed="false"
+        >
+          Play Me <span aria-hidden="true">▷</span>
+        </button>
+
+        <!-- INFO : un message apparaîtra ici en cas de problème de lecture. -->
+        <p
+          id="media-message"
+          class="message"
+          role="status"
+        ></p>
+
+      </header>
+
+
+      <!-- INFO : début de ta lettre. -->
+      <article class="letter">
+
+        <!-- À COMPLÉTER : remplace "Pour toi," par le titre de ta lettre. -->
+        <h1 id="letter-title" tabindex="-1">
+          My full moon on a winter night,
+        </h1>
+
+        <!-- À COMPLÉTER : remplace le texte ci-dessous par ton premier paragraphe. -->
+        <p>
+          Trésor enfoui sur une plage de beauté 
+Abandonnes toi à notre idylle ma dulcinée 
+Terrible ennuie quand tu es loin de mes bras
+Improvises chaque geste, laisse toi aller
+Accélère le rythme, de notre amour effréné 
+Nuit calme ou alors nuit mouvementée 
+A côté de toi, c’est une nuit passionnée
+        </p>
+
+        <!--
+          INFO : pour ajouter un paragraphe, recopie un bloc
+          commençant par <p> et se terminant par </p>,
+          puis remplace le texte situé entre les deux.
+        -->
+
+        <!-- À COMPLÉTER : remplace "Ta signature" par ta signature. -->
+        <p class="signature">
+          Your котик <3
+        </p>
+
+      </article>
+      <!-- INFO : fin de ta lettre. -->
+
+
+      <!-- INFO : ce bouton revient à l’écran du mot de passe et arrête la musique. -->
+      <button
+        id="lock-button"
+        class="lock"
+        type="button"
+      >
+        Refermer la lettre
+      </button>
+
+      <!--
+        À AJOUTER DANS GITHUB :
+        dépose ton fichier musical dans le dossier assets
+        et nomme-le exactement musique.mp4.
+
+        INFO : seule la piste sonore du MP4 sera jouée.
+        Le mot "loop" permet de répéter la musique en boucle.
+        La musique attendra un clic sur "Play Me" pour démarrer.
+      -->
+      <audio
+        id="music"
+        src="assets/musique.mp4"
+        preload="none"
+        loop
+      ></audio>
+
+    </section>
+    <!-- INFO : fin du deuxième écran. -->
+
+  </main>
+
+  <noscript>
+    Active JavaScript dans ton navigateur pour ouvrir la lettre.
+  </noscript>
+
+</body>
+
+</html>
